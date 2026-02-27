@@ -21,7 +21,7 @@ const FraudAlert = () => {
               🚨 Fraud Detected
             </h2>
             <p className="text-gray-700 mb-6">
-              Suspicious financial activity has been flagged by the system.
+              Suspicious financial activity has been flagged by the system for money laundering.
             </p>
             <button
               onClick={() => setShowAlert(false)}

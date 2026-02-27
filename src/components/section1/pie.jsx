@@ -3,9 +3,9 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recha
 
 const FRAUD_DATA = [
   { name: 'Account Takeover', value: 45, color: '#EF4444' }, // Red-500
-  { name: 'Synthetic Identity', value: 25, color: '#F97316' }, // Orange-500
-  { name: 'Card Not Present', value: 20, color: '#EAB308' }, // Yellow-500
-  { name: 'Social Engineering', value: 10, color: '#3B82F6' }, // Blue-500
+  { name: 'Money mule ring detection', value: 25, color: '#F97316' }, // Orange-500
+  { name: 'Card/transaction fraud', value: 20, color: '#EAB308' }, // Yellow-500
+  { name: 'ID/KYC fraud', value: 10, color: '#3B82F6' }, // Blue-500
 ];
 
 const FraudDistributionChart = () => {
