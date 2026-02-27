@@ -5,6 +5,7 @@ import DashboardRightPanel from './card'
 import FraudAlert from './fraudalert'
 import KYCExceptionDashboard from './centre'
 import ActionCenter from './fraudalert'
+import CoolingProgressBar from './cp'
 
 
 
@@ -12,7 +13,7 @@ import ActionCenter from './fraudalert'
 const Rightcont = () => {
   return (
     <div className='h-full w-9/10 bg-gray-100'>
-      <ActionCenter/><DashboardRightPanel/>
+      <ActionCenter/><CoolingProgressBar/>
     <KYCExceptionDashboard/>
     
    
