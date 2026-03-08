@@ -5,24 +5,23 @@ import Navbar from './components/section1/navbar'
 import Sec1cont from './components/section1/sec1cont'
 import sec1 from './components/section1/sec1'
 import Sec1 from './components/section1/sec1'
+import Blank from './components/section1/blank'
 
 const App = () => {
-  
   return (
     <BrowserRouter>
       <Routes>
-        {/* Route for the Login page */}
+        {/* Login page */}
         <Route path="/" element={<Login />} />
 
-        {/* Route for the Dashboard */}
-        <Route 
-          path="/dashboard" 
-          element={
-            <>
-             <Sec1/>
-            </>
-          } 
-        />
+        {/* Dashboard */}
+        <Route path="/dashboard" element={<Sec1 />} />
+
+        {/* Navbar */}
+        <Route path="/nav" element={<Navbar />} />
+
+        {/* Blank page */}
+        <Route path="/blank" element={<Blank />} />
       </Routes>
     </BrowserRouter>
   )

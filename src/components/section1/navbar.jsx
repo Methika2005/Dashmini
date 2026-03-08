@@ -1,13 +1,17 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+    const navigate = useNavigate(); // ✅ get navigate function
   // Logic Functions
   const btnclick = () => console.log('button is clicked');
   
   const onExit = () => {
     console.log('Exit triggered');
     alert("Exiting application...");
+    navigate('/blank')
   };
+ 
 
   return (
     <div className="flex items-center justify-between py-6 px-16 bg-white ">
@@ -33,7 +37,9 @@ const Navbar = () => {
           File &gt; Exit
         </button>
       </nav>
+      
     </div>
+    
   );
 };
 
