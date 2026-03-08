@@ -3,7 +3,7 @@ import React from "react";
 const Leftcont = () => {
   return (
     // Width increased slightly to w-24 to fit the labels comfortably
-    <div className="h-screen bg-white w-30 border-r border-gray-100 flex flex-col items-center py-4 gap-2">
+    <div className="h-screen bg-white w-30 border-r border-gray-100 flex flex-col items-center py-4 gap-3">
       
       {/* Brand Label */}
       <div className="px-2 py-4 text-[10px] font-black uppercase text-blue-600">MARTIAN Firm</div>

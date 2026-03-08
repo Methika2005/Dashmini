@@ -9,6 +9,13 @@ const KYCExceptionDashboard = () => {
     { id:4, entity:"SaaS Supply Chain Attack", type:"", risk:"High",status:"pending",assigned:"Officer",daysOpen:"5d"},
     {id:5,entity:"Quishing",type:"",risk:"medium",status:"pending", assigned:"Cyber crime dept",daysOpen:"3d"}
   ]);
+  function input(elem){
+   
+      console.log('sidha sadha')
+    }
+
+    
+
 
   return (
     <div className="p-8 bg-slate-50 min-h-screen font-sans">
@@ -28,8 +35,11 @@ const KYCExceptionDashboard = () => {
       {/* Filter Bar */}
       <div className="bg-white p-4 rounded-xl shadow-sm mb-6 flex gap-4 items-center border border-slate-200">
         <div className="relative flex-1">
-          <Search className="absolute left-3 top-2.5 text-slate-400 w-4 h-4" />
-          <input 
+          <Search  className="absolute left-3 top-2.5 text-slate-400 w-4 h-4" />
+          <input onWheel={function(elem){
+
+            console.log(elem.deltaY)
+          }}
             type="text" 
             placeholder="Search Entity, UBO, or Case ID..." 
             className="pl-10 w-full p-2 border rounded-lg bg-slate-50 focus:ring-2 focus:ring-blue-500 outline-none"

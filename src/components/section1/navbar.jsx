@@ -1,13 +1,40 @@
-import React from 'react'
+import React from 'react';
 
 const Navbar = () => {
+  // Logic Functions
+  const btnclick = () => console.log('button is clicked');
+  
+  const onExit = () => {
+    console.log('Exit triggered');
+    alert("Exiting application...");
+  };
+
   return (
- <div className="flex items-center justify-between py-6 px-16">
-  <h3 className=' text-black font-bold px-24'>Good Morning</h3>
-  <button className='bg-gray-100 px-6 py-2 text-black uppercase rounded-full tracking-wider text-sm'>See details</button>
-  </div>
-) 
-}
+    <div className="flex items-center justify-between py-6 px-16 bg-white ">
+      {/* Left Section */}
+      <h3 className='text-black font-bold px-4'>Good Morning</h3>
 
+      {/* Center Section */}
+      <button 
+        onClick={btnclick} 
+        className='bg-gray-100 px-6 py-2 text-black uppercase rounded-full tracking-wider text-sm hover:bg-gray-200'
+      >
+        See details
+      </button>
 
-export default Navbar
+      {/* Right Section (Security & Exit) */}
+      <nav className="flex items-center bg-slate-800 text-white p-4 rounded-lg gap-6">
+        <span className="font-bold text-sm">Security Dashboard</span>
+        
+        <button 
+          onClick={onExit}
+          className="bg-red-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-red-700 transition-colors"
+        >
+          File &gt; Exit
+        </button>
+      </nav>
+    </div>
+  );
+};
+
+export default Navbar;

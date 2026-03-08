@@ -13,8 +13,9 @@ import CoolingProgressBar from './cp'
 const Rightcont = () => {
   return (
     <div className='h-full w-9/10 bg-gray-100'>
-      <ActionCenter/><CoolingProgressBar/>
+      <ActionCenter/>
     <KYCExceptionDashboard/>
+    <CoolingProgressBar/>
     
    
     
