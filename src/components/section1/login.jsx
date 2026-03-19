@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { supabase } from "../../supabaseClient"
 
 
 const Login = () => {
@@ -8,17 +8,23 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-    
-    // In a real firm, you'd validate credentials with an API here
-    if (email && password) {
-      console.log("Authenticating Employee...");
-      navigate('/dashboard'); // Move to your Sec1cont page
-    } else {
-      alert("Please enter valid employee credentials.");
-    }
-  };
+const handleLogin = async (e) => {
+  e.preventDefault();
+
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email,
+    password
+  });
+
+  if (error) {
+    alert(error.message);
+  } else {
+    console.log("Login success:", data);
+    alert("Login successful!");
+
+    navigate('/dashboard'); // React way (better than window.location)
+  }
+};
 
   return (
     <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
